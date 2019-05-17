@@ -1,0 +1,18 @@
+.sticky-hero__media {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: url(https://img.fonwall.ru/o/92/tropiki-more-plyaj-peyzaji1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.sticky-hero__content{
+    position: relative;
+    font-size: 48px;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+

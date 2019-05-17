@@ -1,0 +1,35 @@
+{
+  "name": "node-typescript-starter",
+  "version": "0.1.4",
+  "author": "Freek Mencke",
+  "homepage": "https://twitter.com/FreekMencke",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toxsickcoder/node-typescript-starter"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --progress --env.development --env.nodemon",
+    "start:prod": "webpack --progress --env.nodemon",
+    "build:prod": "webpack --progress",
+    "build:ci": "webpack",
+    "build:docker": "docker build --rm -t toxsickcoder/node-typescript-starter:latest .",
+    "deploy:docker": "sh ./scripts/deploy.sh",
+    "analyse:dev": "webpack --progress --env.development --env.analyse && start dist/report.html",
+    "analyse:prod": "webpack --progress --env.analyse && start dist/report.html",
+    "lint": "tslint --project ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.14.6",
+    "clean-webpack-plugin": "^2.0.2",
+    "nodemon-webpack-plugin": "^4.0.8",
+    "ts-loader": "^6.0.0",
+    "tslint": "^5.16.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
